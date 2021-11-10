@@ -102,10 +102,6 @@ const addNumbers = (nums, arr, times, callback) => {
     }
   }
   return theArray;
-}
-
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
