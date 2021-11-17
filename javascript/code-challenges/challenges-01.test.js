@@ -38,10 +38,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
- this.array = array;
+ const myArray = [];
 
- const newArray= [];
- array.forEach(upperCase => newArray.push(UpperCase()));
+ array.forEach(str => {
+   myArray.push(str.toUpperCase());
+ })
  return newArray;
 
 };
@@ -58,17 +59,23 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   const newArray = [];
-  let upperExclamtion = word.upperCase + '!'
-  return(upperExclamtion);
+  word.forEach(str => {
+    newArray.push(str.toUpperCase + '!'());
+    })
+    return newArray
 };
 
 const speaker = (words, callback) => {
-  const newArray = [];
-  this.callback = callback;
-  let yes = callback(word); 
-  console.log(callback(word));
-  words.forEach(finc => newArray.push(func.toUpperCase + '!'));
-  return newArray;
+  const qArray = [];
+  words.forEach(str => {
+    function second(callback){
+    speaker.words;
+    callback(speaker);
+  }
+  second (speaker);
+  })
+  
+  return qArray;
   
 };
 
@@ -92,12 +99,12 @@ const addValues = (arr, value) => {
 value.push(arr);
 };
 
-const addNumbers = (nums, arr, times, callback) => {
+const addNumbers = (num, arr, times, callback) => {
   const theArray = [];
-  arr.forEach(num => theArray.push(num=1));
+  arr.forEach(num => theArray.push(num + 1));
   for(let i=0; i <theArray.length; i++) {
     function hold(callback){
-      callback.addNumber();
+      callback.addNumbers();
 
     }
   }
