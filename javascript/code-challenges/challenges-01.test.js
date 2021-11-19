@@ -25,7 +25,9 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   const newArray = [];
-  arr.forEach(letter => newArray.push(letter + '!'));
+  arr.forEach(str => {
+    newArray.push(str + '!');
+  });
   return newArray;
 };
 
@@ -38,10 +40,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
- this.array = array;
 
  const newArray= [];
- array.forEach(upperCase => newArray.push(UpperCase()));
+ arr.forEach(str => {
+ newArray.push(str.toUpperCase());
+})
  return newArray;
 
 };
@@ -57,18 +60,17 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  const newArray = [];
-  let upperExclamtion = word.upperCase + '!'
-  return(upperExclamtion);
+ return word.toUpperCase()+"!"; 
 };
 
+
 const speaker = (words, callback) => {
-  const newArray = [];
-  this.callback = callback;
-  let yes = callback(word); 
-  console.log(callback(word));
-  words.forEach(finc => newArray.push(func.toUpperCase + '!'));
-  return newArray;
+  const qArray = [];
+  words.forEach(str => {
+  qArray.push(callback(str));
+    });
+
+  return qArray;
   
 };
 
@@ -89,19 +91,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-value.push(arr);
+  arr.push(value);
 };
 
-const addNumbers = (nums, arr, times, callback) => {
-  const theArray = [];
-  arr.forEach(num => theArray.push(num=1));
-  for(let i=0; i <theArray.length; i++) {
-    function hold(callback){
-      callback.addNumber();
-
+const addNumbers = (num, arr, times, callback) => {
+  for(let i=0; i <times; i++) {
+    callback(arr, num)
     }
-  }
-  return theArray;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
