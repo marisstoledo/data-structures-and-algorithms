@@ -9,7 +9,10 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  // Solution code here...
+  const newArray = [];
+  arr.forEach(num => newArray.push(Math.pow(num, 3)));
+
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,7 +22,7 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  // Solution code here...
+return arr.map(num => num + 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,7 +32,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  // Solution code here...
+ return arr.map(str => str + '?');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,7 +60,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  const newArray = [];
+  arr.forEach(num => newArray.push(Math.pow(2, num)));
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +72,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+ return arr.map(num => Math.pow(2, num));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,7 +100,13 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+ return arr.map(num => {
+   if(typeof num !== 'number'){
+     return 'N/A';
+   }
+
+   return num % 2 === 0 ? 'even' : 'odd';
+ })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -188,7 +199,12 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  return arr.map(stat => ({
+    name: statObj.stat.name,
+    total: statObj.effort + statObj.baseStat,
+  }
+  )
+  )
 };
 
 /* ------------------------------------------------------------------------------------------------
