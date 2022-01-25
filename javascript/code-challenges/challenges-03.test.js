@@ -13,7 +13,7 @@ const addTwo = (arr) => {
  }
  return theArray;
 
-=======
+
   // Solution code here...
 };
 
@@ -27,7 +27,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
 return arr.filter(currentValue => typeof currentValue === 'number');
-=======
+
   // Solution code here...
 
 };
@@ -43,7 +43,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 const containsAnd = (arr) => {
 
  return arr.filter(str => str.includes('and'));
-=======
+
   // Solution code here...
 
 };
@@ -59,7 +59,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 const oddValues = (arr) => {
 
 return arr.filter(arr => arr % 2);
-=======
+
   // Solution code here...
 
 };
@@ -74,9 +74,13 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
 
+return arr.filter(currentValue => !forbiddenValues.includes(currentValue));
+
+
 return arr.filter(currentVaule => !forbiddenValues.includes(currentVaule));
-=======
+
   // Solution code here...
+
 
 };
 
@@ -122,7 +126,7 @@ const snorlaxData = {
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
 
 return arr.filter(obj => obj.baseStat > minBaseStat);
-=======
+
   // Solution code here...
 
 };
@@ -138,7 +142,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 const getStatName = (arr, minBaseStat) => {
 
   return arr.filter(currentVaule => currentVaule.baseStat > minBaseStat).map(currentVaule => currentVaule.stat.name);
-=======
+
   // Solution code here...
 
 };
@@ -195,7 +199,7 @@ const characters = [
 const getCharactersWithoutChildren = (arr) => {
 
 return arr.filter(person => !person.children);
-=======
+
   // Solution code here...
 
 };
@@ -320,7 +324,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing characters who do not have children', () => {
     expect(getCharactersWithoutChildren(characters)).toStrictEqual([ { name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' } ]);
     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);
