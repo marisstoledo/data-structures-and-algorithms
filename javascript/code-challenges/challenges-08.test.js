@@ -57,6 +57,7 @@ const sortByChildren = (charArray) => {
   return regex.test(charArray);
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
